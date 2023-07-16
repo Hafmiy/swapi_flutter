@@ -178,4 +178,10 @@ class SearchCubit extends Cubit<SearchState>{
     await _planetsSubscription?.cancel();
     await _starshipsSubscription?.cancel();
   }
+
+  @override
+  Future<void> close() {
+    _cancelSubscriptions();
+    return super.close();
+  }
 }

@@ -1,0 +1,42 @@
+{
+  "@@locale": "en",
+
+  "appName": "SW API Flutter",
+
+  "@_HOME SCREEN": {
+  },
+  "homeScreenSearchTabLabel": "Search",
+  "homeScreenFavoriteTabLabel": "Favorite",
+
+  "@_SEARCH BODY": {
+  },
+  "searchBodySearchHint": "Search",
+  "favoriteBodyEmptySearchStub": "Nothing found",
+
+  "@_FAVORITE BODY": {
+  },
+  "favoriteBodyFilmographyTitle": "Filmography",
+  "favoriteBodyEmptyFilmsStub": "No films found",
+  "favoriteBodyEmptyFavoriteStub": "No favorites yet",
+
+
+  "@_CATEGORY": {
+  },
+  "categoryPeople": "People",
+  "categoryPlanet": "Planets",
+  "categoryStarship": "Starships",
+
+  "@_PLANET ITEM": {
+  },
+  "planetItemDiameter": "Diameter",
+  "planetItemPopulation": "Population",
+
+  "@_STARSHIP ITEM": {
+  },
+  "starshipItemPassengers": "Passengers",
+
+  "@_FILM ITEM": {
+  },
+  "filmItemProduce": "Producer",
+  "filmItemDirector": "Director"
+}

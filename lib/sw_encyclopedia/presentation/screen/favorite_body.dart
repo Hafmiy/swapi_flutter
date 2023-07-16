@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:swapi/core/di/di.dart';
 import 'package:swapi/sw_encyclopedia/application/cubit/favorite_body/favorite_cubit.dart';
-import 'package:swapi/sw_encyclopedia/presentation/extension/theme_context_extension.dart';
+import 'package:swapi/sw_encyclopedia/presentation/extension/context_extension.dart';
 import 'package:swapi/sw_encyclopedia/presentation/extension/widget_list_extension.dart';
 import 'package:swapi/sw_encyclopedia/presentation/widget/item/people_favorite_item.dart';
 import 'package:swapi/sw_encyclopedia/presentation/widget/item/planet_favorite_item.dart';
@@ -37,8 +37,7 @@ class _FavoriteBody extends StatelessWidget {
               child: CustomScrollView(
                 slivers: [
                   const SizedBox(height: 40,),
-
-                  Text('People', style: textTheme.titleLarge,),
+                  Text(context.l10n.categoryPeople, style: textTheme.titleLarge,),
                   const SizedBox(height: 16,),
                   if(state.isPeopleEmpty)
                     const NoFavoritesStub(),
@@ -53,7 +52,7 @@ class _FavoriteBody extends StatelessWidget {
                   ].divide(divider: _getDivider()),
                   const SizedBox(height: 40,),
 
-                  Text('Planet', style: textTheme.titleLarge,),
+                  Text(context.l10n.categoryPlanet, style: textTheme.titleLarge,),
                   if(state.isPeopleEmpty)
                     const NoFavoritesStub(),
                   const SizedBox(height: 16,),
@@ -68,7 +67,7 @@ class _FavoriteBody extends StatelessWidget {
                   ].divide(divider: _getDivider()),
                   const SizedBox(height: 40,),
 
-                  Text('Starship', style: textTheme.titleLarge,),
+                  Text(context.l10n.categoryStarship, style: textTheme.titleLarge,),
                   const SizedBox(height: 16,),
                   if(state.isPeopleEmpty)
                     const NoFavoritesStub(),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swapi/core/extension/string_extension.dart';
 import 'package:swapi/sw_encyclopedia/domain/entity/people.dart';
-import 'package:swapi/sw_encyclopedia/presentation/extension/theme_context_extension.dart';
+import 'package:swapi/sw_encyclopedia/presentation/extension/context_extension.dart';
 
 class PeopleItem extends StatelessWidget {
   final People people;
@@ -23,7 +23,7 @@ class PeopleItem extends StatelessWidget {
         const SizedBox(
           width: 32,
         ),
-        Expanded(child: Text('Starships: ${people.starshipsQuantity}', style: textTheme.bodyMedium,),)
+        Expanded(child: Text('${context.l10n.categoryStarship}: ${people.starshipsQuantity}', style: textTheme.bodyMedium,),)
       ],
     ),
       trailing: IconButton(

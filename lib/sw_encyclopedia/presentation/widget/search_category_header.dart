@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swapi/sw_encyclopedia/presentation/extension/theme_context_extension.dart';
+import 'package:swapi/sw_encyclopedia/presentation/extension/context_extension.dart';
 import 'package:swapi/sw_encyclopedia/presentation/widget/load_indicator.dart';
 
 class SearchCategoryHeader extends StatelessWidget {

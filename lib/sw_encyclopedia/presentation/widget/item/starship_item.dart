@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swapi/core/extension/string_extension.dart';
 import 'package:swapi/sw_encyclopedia/domain/entity/starship.dart';
-import 'package:swapi/sw_encyclopedia/presentation/extension/theme_context_extension.dart';
+import 'package:swapi/sw_encyclopedia/presentation/extension/context_extension.dart';
 
 class StarshipItem extends StatelessWidget {
   final Starship starship;
@@ -53,7 +53,7 @@ class StarshipItem extends StatelessWidget {
           ),
           Expanded(
             child: Text(
-              'Passangers: ${starship.passengers}',
+              '${context.l10n.starshipItemPassengers}: ${starship.passengers}',
               style: textTheme.bodyMedium,
             ),
           ),

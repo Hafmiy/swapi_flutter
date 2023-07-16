@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:swapi/sw_encyclopedia/presentation/extension/context_extension.dart';
 import 'package:swapi/sw_encyclopedia/presentation/screen/favorite_body.dart';
 import 'package:swapi/sw_encyclopedia/presentation/screen/search_body.dart';
+import 'package:swapi/sw_encyclopedia/presentation/widget/home_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
 
@@ -16,6 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const HomeAppBar(),
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (int index) {
           setState(() {
@@ -23,16 +26,16 @@ class _HomeScreenState extends State<HomeScreen> {
           });
         },
         selectedIndex: pageIndex,
-        destinations: const [
+        destinations: [
           NavigationDestination(
-            selectedIcon: Icon(Icons.search),
-            icon: Icon(Icons.search_outlined),
-            label: 'Search',
+            selectedIcon: const Icon(Icons.search),
+            icon: const Icon(Icons.search_outlined),
+            label: context.l10n.homeScreenSearchTabLabel,
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.star),
-            icon: Icon(Icons.star_outline),
-            label: 'Favorite',
+            selectedIcon: const Icon(Icons.star),
+            icon: const Icon(Icons.star_outline),
+            label: context.l10n.homeScreenFavoriteTabLabel,
           ),
         ],
       ),

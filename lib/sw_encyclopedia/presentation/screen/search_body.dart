@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:swapi/core/di/di.dart';
 import 'package:swapi/sw_encyclopedia/application/cubit/search_body/search_cubit.dart';
+import 'package:swapi/sw_encyclopedia/presentation/extension/context_extension.dart';
 import 'package:swapi/sw_encyclopedia/presentation/extension/widget_list_extension.dart';
 import 'package:swapi/sw_encyclopedia/presentation/widget/item/people_item.dart';
 import 'package:swapi/sw_encyclopedia/presentation/widget/item/planet_item.dart';
@@ -34,13 +35,13 @@ class _SearchBody extends StatelessWidget {
             return Stack(
               children: [
                 Positioned(
-                  top: 32,
+                  top: 16,
                   left: 16,
                   right: 16,
                   child: Padding(
                     padding: const EdgeInsets.only(right: 16),
                     child: SearchBar(
-                      hintText: 'Search',
+                      hintText: context.l10n.searchBodySearchHint,
                       onChanged: cubit.onSearch,
                     ),),
                 ),
@@ -49,9 +50,8 @@ class _SearchBody extends StatelessWidget {
                   child: CustomScrollView(
                     slivers: [
                       const SizedBox(height: 40,),
-
                       SearchCategoryHeader(
-                        title: 'People',
+                        title: context.l10n.categoryPeople,
                         syncing: state.requestStatus.peopleRequesting,
                       ),
                       const SizedBox(height: 16,),
@@ -68,7 +68,7 @@ class _SearchBody extends StatelessWidget {
                       const SizedBox(height: 40,),
 
                       SearchCategoryHeader(
-                        title: 'Planets',
+                        title: context.l10n.categoryPlanet,
                         syncing: state.requestStatus.planetsRequesting,
                       ),
                       const SizedBox(height: 16,),
@@ -85,7 +85,7 @@ class _SearchBody extends StatelessWidget {
                       const SizedBox(height: 40,),
 
                       SearchCategoryHeader(
-                        title: 'Starship',
+                        title: context.l10n.categoryStarship,
                         syncing: state.requestStatus.starshipsRequesting,
                       ),
                       const SizedBox(height: 16,),

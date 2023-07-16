@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swapi/sw_encyclopedia/domain/entity/film.dart';
 import 'package:swapi/sw_encyclopedia/domain/entity/planet.dart';
-import 'package:swapi/sw_encyclopedia/presentation/extension/theme_context_extension.dart';
+import 'package:swapi/sw_encyclopedia/presentation/extension/context_extension.dart';
 import 'package:swapi/sw_encyclopedia/presentation/widget/film_list.dart';
 import 'package:swapi/sw_encyclopedia/presentation/widget/item/planet_item.dart';
 
@@ -27,7 +27,7 @@ class PlanetFavoriteItem extends StatelessWidget {
         const SizedBox(height: 16,),
         Padding(
           padding: const EdgeInsets.only(left: 24.0),
-          child: Text('Filmography', style: context.textTheme.titleMedium,),
+          child: Text(context.l10n.favoriteBodyFilmographyTitle, style: context.textTheme.titleMedium,),
         ),
         Center(child: _getFilmography(context))
       ],
@@ -48,7 +48,7 @@ class PlanetFavoriteItem extends StatelessWidget {
         return FilmList(films: films);
       } else {
         return Center(
-          child: Text('No films found', style: context.textTheme.titleMedium,),
+          child: Text(context.l10n.favoriteBodyEmptyFilmsStub, style: context.textTheme.titleMedium,),
         );
       }
     }

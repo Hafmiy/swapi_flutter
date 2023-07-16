@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swapi/core/extension/string_extension.dart';
 import 'package:swapi/sw_encyclopedia/domain/entity/planet.dart';
-import 'package:swapi/sw_encyclopedia/presentation/extension/theme_context_extension.dart';
+import 'package:swapi/sw_encyclopedia/presentation/extension/context_extension.dart';
 
 class PlanetItem extends StatelessWidget {
   final Planet planet;
@@ -27,14 +27,14 @@ class PlanetItem extends StatelessWidget {
         children: [
           Expanded(
             child: Text(
-              'Diameter: ${planet.diameter.capitalize()}',
+              '${context.l10n.planetItemDiameter}: ${planet.diameter.capitalize()}',
               style: textTheme.bodyMedium,
             ),
           ),
           const SizedBox(width: 32,),
           Expanded(
             child: Text(
-              'Population: ${planet.population}',
+              '${context.l10n.planetItemPopulation}: ${planet.population}',
               style: textTheme.bodyMedium,
             ),
           ),

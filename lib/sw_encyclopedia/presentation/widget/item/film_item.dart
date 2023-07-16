@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swapi/sw_encyclopedia/domain/entity/film.dart';
-import 'package:swapi/sw_encyclopedia/presentation/extension/theme_context_extension.dart';
+import 'package:swapi/sw_encyclopedia/presentation/extension/context_extension.dart';
 
 class FilmItem extends StatelessWidget {
   final Film film;
@@ -32,7 +32,7 @@ class FilmItem extends StatelessWidget {
                     text: TextSpan(
                         children: [
                           TextSpan(
-                              text: 'Producer: ',
+                              text: '${context.l10n.filmItemProduce}: ',
                               style: textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w600),
                           ),
                           TextSpan(
@@ -47,7 +47,7 @@ class FilmItem extends StatelessWidget {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text: 'Director: ',
+                        text: '${context.l10n.filmItemDirector}: ',
                         style: textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w600),
                       ),
                       TextSpan(

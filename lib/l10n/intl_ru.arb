@@ -1,0 +1,41 @@
+{
+  "@@locale": "ru",
+  "appName": "SW API Flutter",
+
+  "@_HOME SCREEN": {
+  },
+  "homeScreenSearchTabLabel": "Поиск",
+  "homeScreenFavoriteTabLabel": "Избранные",
+
+  "@_SEARCH BODY": {
+  },
+  "searchBodySearchHint": "Поиск",
+  "favoriteBodyEmptySearchStub": "Ничего не найдено",
+
+  "@_FAVORITE BODY": {
+  },
+  "favoriteBodyFilmographyTitle": "Фильмография",
+  "favoriteBodyEmptyFilmsStub": "Фильмов не найдено",
+  "favoriteBodyEmptyFavoriteStub": "Пока нет избранных",
+
+
+  "@_CATEGORY": {
+  },
+  "categoryPeople": "Люди",
+  "categoryPlanet": "Планеты",
+  "categoryStarship": "Корабли",
+
+  "@_PLANET ITEM": {
+  },
+  "planetItemDiameter": "Диаметр",
+  "planetItemPopulation": "Население",
+
+  "@_STARSHIP ITEM": {
+  },
+  "starshipItemPassengers": "Пассажиры",
+
+  "@_FILM ITEM": {
+  },
+  "filmItemProduce": "Продюсер",
+  "filmItemDirector": "Режиссёр"
+}
